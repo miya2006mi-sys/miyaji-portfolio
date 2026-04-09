@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宮地陽生 | Web制作ポートフォリオ</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue','Noto Sans JP',sans-serif;color:#333;line-height:1.8;background:#fafafa}
+a{color:#2e75b6;text-decoration:none}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#1b2a4a 0%,#2e75b6 100%);color:#fff;padding:80px 0 60px;text-align:center}
+.hero h1{font-size:28px;font-weight:700;margin-bottom:8px}
+.hero p{font-size:16px;opacity:.85;margin-bottom:24px}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.15);padding:6px 16px;border-radius:20px;font-size:13px;margin:4px}
+
+/* Section */
+section{padding:60px 0}
+section h2{font-size:22px;font-weight:700;margin-bottom:32px;padding-bottom:12px;border-bottom:3px solid #2e75b6}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.about-item h3{font-size:15px;color:#2e75b6;margin-bottom:8px}
+.about-item p{font-size:14px;color:#555}
+@media(max-width:600px){.about-grid{grid-template-columns:1fr}}
+
+/* Works */
+.works-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.work-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
+.work-card:hover{transform:translateY(-4px)}
+.work-card .thumb{height:180px;background:#e8edf2;display:flex;align-items:center;justify-content:center;font-size:14px;color:#888}
+.work-card .info{padding:20px}
+.work-card .info h3{font-size:16px;margin-bottom:6px}
+.work-card .info p{font-size:13px;color:#666}
+.work-card .info .tags span{display:inline-block;background:#f0f4f8;color:#2e75b6;font-size:11px;padding:3px 10px;border-radius:12px;margin:4px 4px 0 0}
+
+/* Skills */
+.skills-list{display:flex;flex-wrap:wrap;gap:12px}
+.skill{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:12px 20px;font-size:14px}
+
+/* Price */
+.price-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.price-table th,.price-table td{padding:16px 20px;text-align:left;border-bottom:1px solid #f0f0f0}
+.price-table th{background:#f8f9fa;font-weight:600;font-size:14px}
+.price-table td{font-size:14px}
+.price-table .price{color:#2e75b6;font-weight:700;font-size:16px}
+
+/* Contact */
+.contact-box{background:#fff;border-radius:12px;padding:40px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.contact-box h3{font-size:18px;margin-bottom:12px}
+.contact-box p{font-size:14px;color:#666;margin-bottom:24px}
+.btn{display:inline-block;background:#2e75b6;color:#fff;padding:14px 40px;border-radius:8px;font-size:15px;font-weight:600;transition:background .2s}
+.btn:hover{background:#1b5a96;color:#fff}
+
+footer{text-align:center;padding:40px 0;font-size:12px;color:#999}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <h1>宮地 陽生</h1>
+    <p>個人サロン・飲食店・小規模事業者向け Web制作</p>
+    <span class="tag">バナー制作</span>
+    <span class="tag">LP制作</span>
+    <span class="tag">ホームページ制作</span>
+    <span class="tag">SNS画像</span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>About</h2>
+    <div class="about-grid">
+      <div class="about-item">
+        <h3>対応力</h3>
+        <p>メッセージにはだいたい3時間以内に返信します。納期は余裕を持ってお引き受けするので、急な修正にも対応できます。</p>
+      </div>
+      <div class="about-item">
+        <h3>得意分野</h3>
+        <p>飲食店・個人サロン・小規模事業者のWeb制作が得意です。「自分で更新できるサイト」を意識して制作しています。</p>
+      </div>
+      <div class="about-item">
+        <h3>制作の考え方</h3>
+        <p>見た目だけでなく、「見た人にどう動いてほしいか」まで考えてデザインします。集客やお問い合わせにつながる制作を心がけています。</p>
+      </div>
+      <div class="about-item">
+        <h3>稼働時間</h3>
+        <p>金曜午後・土日を中心に週15〜20時間。平日もメッセージ対応可能です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="container">
+    <h2>Works</h2>
+    <div class="works-grid">
+      <div class="work-card">
+        <div class="thumb">カフェ Instagram画像</div>
+        <div class="info">
+          <h3>カフェ SNS投稿デザイン</h3>
+          <p>メニュー紹介・キャンペーン告知画像を制作。フィード全体の統一感を設計し、オーナーから「投稿が楽しくなった」と好評。</p>
+          <div class="tags"><span>Canva</span><span>Instagram</span><span>飲食店</span></div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="thumb">職務経歴書 PowerPoint</div>
+        <div class="info">
+          <h3>職務経歴書 パワーポイント化</h3>
+          <p>PDFの職務経歴書をビジネス向けPowerPointに変換。ネイビー×ブルーの落ち着いたデザインで3ページ構成。</p>
+          <div class="tags"><span>PowerPoint</span><span>資料制作</span><span>ビジネス</span></div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="thumb">サンプル バナー</div>
+        <div class="info">
+          <h3>サンプルバナー各種</h3>
+          <p>キャンペーン告知・セール案内・SNS広告用バナーのサンプル。ターゲットに合わせたトーン設計。</p>
+          <div class="tags"><span>Canva</span><span>バナー</span><span>広告</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">Canva</div>
+      <div class="skill">Wix / Wix Studio</div>
+      <div class="skill">STUDIO</div>
+      <div class="skill">WordPress</div>
+      <div class="skill">HTML / CSS</div>
+      <div class="skill">PowerPoint</div>
+      <div class="skill">Photoshop（基本操作）</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="container">
+    <h2>Price</h2>
+    <table class="price-table">
+      <tr><th>メニュー</th><th>料金（税込）</th><th>納期目安</th></tr>
+      <tr><td>バナー / SNS画像</td><td class="price">3,000円〜</td><td>2〜3日</td></tr>
+      <tr><td>LP制作</td><td class="price">30,000円〜</td><td>1〜2週間</td></tr>
+      <tr><td>ホームページ制作</td><td class="price">50,000円〜</td><td>2〜4週間</td></tr>
+      <tr><td>既存サイト修正・更新</td><td class="price">3,000円〜</td><td>1〜3日</td></tr>
+    </table>
+    <p style="margin-top:16px;font-size:13px;color:#888">※ 内容・ページ数により変動します。お気軽にご相談ください。</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-box">
+      <h3>お気軽にご相談ください</h3>
+      <p>「まだイメージが固まっていない」段階でも大丈夫です。<br>ちょっとした相談だけでもお気軽にどうぞ。</p>
+      <a href="https://crowdworks.jp/public/employees/5765132" class="btn">CrowdWorksで相談する</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 2026 宮地陽生 All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

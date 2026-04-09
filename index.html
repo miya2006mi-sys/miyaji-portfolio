@@ -3,172 +3,869 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>宮地陽生 | Web制作ポートフォリオ</title>
+<title>宮地陽生 | Web制作・バナー・SNS画像</title>
+<meta name="description" content="個人サロン・飲食店・小規模事業者さま向けに、バナー制作・SNS画像・LP・ホームページ制作を承っています。お問い合わせから納品後の更新まで、丁寧に対応します。">
+<meta property="og:title" content="宮地陽生 | Web制作・バナー・SNS画像">
+<meta property="og:description" content="個人サロン・飲食店・小規模事業者さま向けに、バナー・SNS画像・LP・ホームページ制作を承っています。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miya2006mi-sys.github.io/miyaji-portfolio/">
+<meta property="og:image" content="https://miya2006mi-sys.github.io/miyaji-portfolio/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23283044'/><text x='16' y='23' font-size='18' font-family='sans-serif' font-weight='bold' fill='%23e8a87c' text-anchor='middle'>M</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Helvetica Neue','Noto Sans JP',sans-serif;color:#333;line-height:1.8;background:#fafafa}
-a{color:#2e75b6;text-decoration:none}
-.container{max-width:960px;margin:0 auto;padding:0 24px}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* Hero */
-.hero{background:linear-gradient(135deg,#1b2a4a 0%,#2e75b6 100%);color:#fff;padding:80px 0 60px;text-align:center}
-.hero h1{font-size:28px;font-weight:700;margin-bottom:8px}
-.hero p{font-size:16px;opacity:.85;margin-bottom:24px}
-.hero .tag{display:inline-block;background:rgba(255,255,255,.15);padding:6px 16px;border-radius:20px;font-size:13px;margin:4px}
+:root {
+  --navy: #283044;
+  --navy-light: #3a4660;
+  --coral: #e8a87c;
+  --coral-deep: #d4916a;
+  --sage: #7bae7f;
+  --cream: #faf7f2;
+  --warm-white: #fffcf8;
+  --text: #3a3532;
+  --text-sub: #76706a;
+  --border: #e6dfd6;
+  --radius-s: 5px;
+  --radius-m: 10px;
+  --radius-l: 18px;
+}
 
-/* Section */
-section{padding:60px 0}
-section h2{font-size:22px;font-weight:700;margin-bottom:32px;padding-bottom:12px;border-bottom:3px solid #2e75b6}
+html { scroll-behavior: smooth; }
 
-/* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.about-item h3{font-size:15px;color:#2e75b6;margin-bottom:8px}
-.about-item p{font-size:14px;color:#555}
-@media(max-width:600px){.about-grid{grid-template-columns:1fr}}
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.85;
+  background: var(--cream);
+  font-weight: 400;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
 
-/* Works */
-.works-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.work-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
-.work-card:hover{transform:translateY(-4px)}
-.work-card .thumb{height:180px;background:#e8edf2;display:flex;align-items:center;justify-content:center;font-size:14px;color:#888}
-.work-card .info{padding:20px}
-.work-card .info h3{font-size:16px;margin-bottom:6px}
-.work-card .info p{font-size:13px;color:#666}
-.work-card .info .tags span{display:inline-block;background:#f0f4f8;color:#2e75b6;font-size:11px;padding:3px 10px;border-radius:12px;margin:4px 4px 0 0}
+a { color: var(--navy); }
 
-/* Skills */
-.skills-list{display:flex;flex-wrap:wrap;gap:12px}
-.skill{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:12px 20px;font-size:14px}
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
 
-/* Price */
-.price-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.price-table th,.price-table td{padding:16px 20px;text-align:left;border-bottom:1px solid #f0f0f0}
-.price-table th{background:#f8f9fa;font-weight:600;font-size:14px}
-.price-table td{font-size:14px}
-.price-table .price{color:#2e75b6;font-weight:700;font-size:16px}
+/* ─── Hero ─── */
+#hero {
+  position: relative;
+  background: var(--navy);
+  color: #fff;
+  padding: 96px 0 72px;
+  overflow: hidden;
+}
 
-/* Contact */
-.contact-box{background:#fff;border-radius:12px;padding:40px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.contact-box h3{font-size:18px;margin-bottom:12px}
-.contact-box p{font-size:14px;color:#666;margin-bottom:24px}
-.btn{display:inline-block;background:#2e75b6;color:#fff;padding:14px 40px;border-radius:8px;font-size:15px;font-weight:600;transition:background .2s}
-.btn:hover{background:#1b5a96;color:#fff}
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 80%, rgba(232,168,124,.18) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 55% at 85% 20%, rgba(123,174,127,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
 
-footer{text-align:center;padding:40px 0;font-size:12px;color:#999}
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .06;
+  background-image:
+    linear-gradient(30deg, #fff 1px, transparent 1px),
+    linear-gradient(150deg, #fff 1px, transparent 1px);
+  background-size: 48px 84px;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-name {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  opacity: .78;
+  margin-bottom: 28px;
+  letter-spacing: .03em;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-tags span {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 5px 15px;
+  border-radius: 22px;
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+
+/* ─── Nav (sticky) ─── */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250,247,242,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.sticky-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sticky-nav a {
+  display: block;
+  padding: 13px 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-sub);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .15s;
+}
+
+.sticky-nav a:hover { color: var(--navy); }
+
+/* ─── Section base ─── */
+section {
+  padding: 72px 0;
+}
+
+.sec-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--coral-deep);
+  margin-bottom: 6px;
+}
+
+.sec-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 36px;
+  color: var(--navy);
+}
+
+/* ─── About ─── */
+#about {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-lead {
+  font-size: 15.5px;
+  line-height: 2;
+  color: var(--text);
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+}
+
+.about-point {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  padding: 22px 24px;
+  box-shadow: 0 1px 3px rgba(40,48,68,.04), 0 4px 12px rgba(40,48,68,.03);
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.about-point:hover {
+  box-shadow: 0 2px 8px rgba(40,48,68,.07), 0 8px 24px rgba(40,48,68,.05);
+  transform: translateY(-2px);
+  border-color: var(--sage);
+}
+
+.about-point dt {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.about-point dt::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--coral);
+  flex-shrink: 0;
+}
+
+.about-point dd {
+  font-size: 13.5px;
+  color: var(--text-sub);
+  line-height: 1.75;
+}
+
+/* ─── Works ─── */
+#works {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.works-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.works-card:hover {
+  box-shadow: 0 4px 16px rgba(40,48,68,.08);
+  transform: translateY(-3px);
+}
+
+.works-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.works-banner * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Banner 1: Cafe - Natural */
+.banner-cafe {
+  background:
+    linear-gradient(135deg, #f5ebe0 0%, #d5c4a1 50%, #c9b896 100%);
+  color: #4a3728;
+  font-family: 'Noto Sans JP', serif;
+}
+
+.banner-cafe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle 60px at 15% 25%, rgba(139,109,71,.15) 0%, transparent 70%),
+    radial-gradient(circle 40px at 85% 70%, rgba(139,109,71,.1) 0%, transparent 60%),
+    radial-gradient(circle 80px at 50% 90%, rgba(210,180,140,.2) 0%, transparent 50%);
+}
+
+.banner-cafe::after {
+  content: '';
+  position: absolute;
+  top: 8px; left: 8px; right: 8px; bottom: 8px;
+  border: 1px solid rgba(74,55,40,.12);
+  border-radius: 4px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.banner-cafe .banner-icon {
+  font-size: 28px;
+  margin-bottom: 4px;
+  filter: grayscale(.2);
+}
+
+.banner-cafe .banner-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  margin-bottom: 2px;
+  color: #3d2b1f;
+}
+
+.banner-cafe .banner-copy {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: .06em;
+  color: #6b5744;
+  margin-bottom: 10px;
+}
+
+.banner-cafe .banner-cta {
+  display: inline-block;
+  background: #4a3728;
+  color: #f5ebe0;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 5px 18px;
+  border-radius: 20px;
+  letter-spacing: .06em;
+}
+
+/* Banner 2: Salon - Modern */
+.banner-salon {
+  background:
+    linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  color: #e8d5b7;
+}
+
+.banner-salon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 50% 80% at 80% 20%, rgba(232,213,183,.1) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(212,145,106,.08) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 40%, rgba(232,213,183,.03) 50%, transparent 60%);
+}
+
+.banner-salon::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a96e, #e8d5b7, #c9a96e);
+  z-index: 0;
+}
+
+.banner-salon .banner-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+  opacity: .9;
+}
+
+.banner-salon .banner-title {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin-bottom: 2px;
+  color: #e8d5b7;
+}
+
+.banner-salon .banner-copy {
+  font-size: 9.5px;
+  font-weight: 300;
+  letter-spacing: .08em;
+  color: rgba(232,213,183,.7);
+  margin-bottom: 10px;
+}
+
+.banner-salon .banner-cta {
+  display: inline-block;
+  background: transparent;
+  color: #e8d5b7;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 4px 18px;
+  border: 1px solid rgba(232,213,183,.5);
+  border-radius: 2px;
+  letter-spacing: .1em;
+}
+
+/* Banner 3: Bakery - Pop */
+.banner-bakery {
+  background:
+    linear-gradient(150deg, #fff5e6 0%, #ffe8cc 30%, #ffd4a3 70%, #ffcf96 100%);
+  color: #5c3d2e;
+}
+
+.banner-bakery::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle 50px at 10% 15%, rgba(255,107,107,.12) 0%, transparent 60%),
+    radial-gradient(circle 35px at 90% 20%, rgba(255,159,67,.15) 0%, transparent 50%),
+    radial-gradient(circle 45px at 75% 85%, rgba(255,107,107,.1) 0%, transparent 50%),
+    radial-gradient(circle 30px at 20% 80%, rgba(255,200,100,.15) 0%, transparent 50%);
+}
+
+.banner-bakery::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: .04;
+  background-image:
+    radial-gradient(circle 3px at 20% 30%, #5c3d2e 1px, transparent 1px),
+    radial-gradient(circle 3px at 60% 15%, #5c3d2e 1px, transparent 1px),
+    radial-gradient(circle 3px at 80% 60%, #5c3d2e 1px, transparent 1px),
+    radial-gradient(circle 3px at 40% 75%, #5c3d2e 1px, transparent 1px),
+    radial-gradient(circle 3px at 10% 65%, #5c3d2e 1px, transparent 1px);
+}
+
+.banner-bakery .banner-icon {
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+
+.banner-bakery .banner-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  margin-bottom: 2px;
+  color: #5c3d2e;
+}
+
+.banner-bakery .banner-copy {
+  font-size: 10px;
+  font-weight: 400;
+  color: #8b6347;
+  margin-bottom: 10px;
+}
+
+.banner-bakery .banner-cta {
+  display: inline-block;
+  background: #e85d3a;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 20px;
+  letter-spacing: .04em;
+}
+
+.works-meta {
+  padding: 16px 18px;
+}
+
+.works-meta .works-type {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--coral-deep);
+  letter-spacing: .06em;
+  margin-bottom: 3px;
+}
+
+.works-meta .works-desc {
+  font-size: 12.5px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* ─── Skills ─── */
+#skills {
+  background: var(--cream);
+}
+
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-s);
+  padding: 9px 18px;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--text);
+  transition: border-color .2s ease, background .2s ease, box-shadow .25s ease, color .2s ease;
+}
+
+.skill-chip:hover {
+  border-color: var(--sage);
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 2px 8px rgba(123,174,127,.15);
+}
+
+/* ─── Price ─── */
+#price {
+  background: var(--warm-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(40,48,68,.04), 0 4px 12px rgba(40,48,68,.03);
+}
+
+.price-table thead th {
+  background: var(--navy);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 14px 22px;
+  text-align: left;
+  letter-spacing: .03em;
+}
+
+.price-table tbody td {
+  padding: 16px 22px;
+  font-size: 14px;
+  border-bottom: 1px solid #f0ece6;
+  color: var(--text);
+}
+
+.price-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.price-table .amount {
+  font-weight: 600;
+  color: var(--coral-deep);
+  font-size: 15px;
+}
+
+.price-note {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--text-sub);
+}
+
+/* ─── Contact ─── */
+#contact {
+  background: var(--cream);
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  padding: 48px 40px;
+  max-width: 560px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(40,48,68,.04), 0 8px 24px rgba(40,48,68,.04);
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.85;
+  margin-bottom: 28px;
+}
+
+.contact-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-btns a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 24px;
+  border-radius: var(--radius-s);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity .15s, transform .1s;
+}
+
+.contact-btns a:hover {
+  opacity: .88;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40,48,68,.12);
+}
+
+.btn-lancers {
+  background: #0ea832;
+  color: #fff;
+}
+
+.btn-mail {
+  background: var(--navy);
+  color: #fff;
+}
+
+.contact-sub {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+/* ─── Footer ─── */
+footer {
+  padding: 36px 0;
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--text-sub);
+  letter-spacing: .02em;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 840px) {
+  .works-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  #hero { padding: 68px 0 52px; }
+  .hero-name { font-size: 26px; }
+  .hero-sub { font-size: 14px; }
+  .hero-tags span { font-size: 11.5px; padding: 4px 12px; }
+
+  .sticky-nav a { padding: 12px 15px; font-size: 11.5px; }
+
+  section { padding: 52px 0; }
+  .sec-title { font-size: 19px; margin-bottom: 28px; }
+
+  .works-grid { grid-template-columns: 1fr; max-width: 360px; }
+
+  .about-points { grid-template-columns: 1fr; gap: 14px; }
+  .about-point { padding: 18px 20px; }
+
+  .price-table thead th { padding: 12px 14px; font-size: 11.5px; }
+  .price-table tbody td { padding: 13px 14px; font-size: 13px; }
+  .price-table .amount { font-size: 14px; }
+
+  .contact-card { padding: 32px 24px; }
+  .contact-btns a { padding: 14px 18px; font-size: 13.5px; }
+}
+
+@media (max-width: 400px) {
+  .wrap { padding: 0 18px; }
+  .hero-name { font-size: 23px; }
+  .price-table thead th,
+  .price-table tbody td { padding: 11px 10px; }
+}
 </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="container">
-    <h1>宮地 陽生</h1>
-    <p>個人サロン・飲食店・小規模事業者向け Web制作</p>
-    <span class="tag">バナー制作</span>
-    <span class="tag">LP制作</span>
-    <span class="tag">ホームページ制作</span>
-    <span class="tag">SNS画像</span>
+<!-- Hero -->
+<div id="hero">
+  <div class="wrap hero-inner">
+    <p class="hero-name">宮地 陽生</p>
+    <p class="hero-sub">個人サロン・飲食店・小規模事業者さま向けの Web制作</p>
+    <div class="hero-tags">
+      <span>バナー制作</span>
+      <span>SNS画像</span>
+      <span>LP制作</span>
+      <span>ホームページ制作</span>
+    </div>
   </div>
 </div>
 
-<section>
-  <div class="container">
-    <h2>About</h2>
-    <div class="about-grid">
-      <div class="about-item">
-        <h3>対応力</h3>
-        <p>メッセージにはだいたい3時間以内に返信します。納期は余裕を持ってお引き受けするので、急な修正にも対応できます。</p>
+<!-- Nav -->
+<nav class="sticky-nav" aria-label="ページ内ナビゲーション">
+  <div class="wrap">
+    <ul>
+      <li><a href="#about">わたしについて</a></li>
+      <li><a href="#works">制作例</a></li>
+      <li><a href="#skills">スキル</a></li>
+      <li><a href="#price">料金</a></li>
+      <li><a href="#contact">ご相談</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- About -->
+<section id="about">
+  <div class="wrap">
+    <span class="sec-label">About</span>
+    <h2 class="sec-title">お店の「伝えたい」を<br>Webでかたちにします</h2>
+    <p class="about-lead">飲食店や個人サロンなど、小さなお店のWeb周りを中心にお手伝いしています。「見た目がきれい」で終わらず、お問い合わせや来店につながる導線まで考えてつくります。納品後にご自身で更新できる構成にすることも大切にしています。</p>
+    <dl class="about-points">
+      <div class="about-point">
+        <dt>レスポンスの速さ</dt>
+        <dd>メッセージには基本3時間以内に返信しています。納期に余裕を持ってお受けするので、途中の修正にも柔軟に対応できます。</dd>
       </div>
-      <div class="about-item">
-        <h3>得意分野</h3>
-        <p>飲食店・個人サロン・小規模事業者のWeb制作が得意です。「自分で更新できるサイト」を意識して制作しています。</p>
+      <div class="about-point">
+        <dt>導線を意識した設計</dt>
+        <dd>見た人が次に何をするかまで考えます。お問い合わせ・予約・来店といったゴールへの流れを丁寧に設計します。</dd>
       </div>
-      <div class="about-item">
-        <h3>制作の考え方</h3>
-        <p>見た目だけでなく、「見た人にどう動いてほしいか」まで考えてデザインします。集客やお問い合わせにつながる制作を心がけています。</p>
+      <div class="about-point">
+        <dt>更新しやすい納品物</dt>
+        <dd>WordPressやWix、Canvaなど、ご自身で触れるツールで構成。納品後に放置にならない仕組みをつくります。</dd>
       </div>
-      <div class="about-item">
-        <h3>稼働時間</h3>
-        <p>金曜午後・土日を中心に週15〜20時間。平日もメッセージ対応可能です。</p>
+      <div class="about-point">
+        <dt>稼働について</dt>
+        <dd>金曜午後・土日を中心に、週15〜20時間ほど作業しています。平日もメッセージ対応は可能です。</dd>
       </div>
-    </div>
+    </dl>
   </div>
 </section>
 
-<section style="background:#fff">
-  <div class="container">
-    <h2>Works</h2>
+<!-- Works -->
+<section id="works">
+  <div class="wrap">
+    <span class="sec-label">Works</span>
+    <h2 class="sec-title">バナー制作の一例</h2>
     <div class="works-grid">
-      <div class="work-card">
-        <div class="thumb">カフェ Instagram画像</div>
-        <div class="info">
-          <h3>カフェ SNS投稿デザイン</h3>
-          <p>メニュー紹介・キャンペーン告知画像を制作。フィード全体の統一感を設計し、オーナーから「投稿が楽しくなった」と好評。</p>
-          <div class="tags"><span>Canva</span><span>Instagram</span><span>飲食店</span></div>
+
+      <!-- Banner 1: Cafe / Natural -->
+      <div class="works-card">
+        <div class="works-banner banner-cafe">
+          <span class="banner-icon">&#9749;</span>
+          <p class="banner-title">komorebi coffee</p>
+          <p class="banner-copy">木漏れ日のなかで、ゆっくり一杯を。</p>
+          <span class="banner-cta">MENU &amp; ACCESS</span>
+        </div>
+        <div class="works-meta">
+          <p class="works-type">カフェ / バナー</p>
+          <p class="works-desc">ナチュラルな空気感を大切にした、カフェ向けの集客バナー</p>
         </div>
       </div>
-      <div class="work-card">
-        <div class="thumb">職務経歴書 PowerPoint</div>
-        <div class="info">
-          <h3>職務経歴書 パワーポイント化</h3>
-          <p>PDFの職務経歴書をビジネス向けPowerPointに変換。ネイビー×ブルーの落ち着いたデザインで3ページ構成。</p>
-          <div class="tags"><span>PowerPoint</span><span>資料制作</span><span>ビジネス</span></div>
+
+      <!-- Banner 2: Salon / Modern -->
+      <div class="works-card">
+        <div class="works-banner banner-salon">
+          <span class="banner-icon">&#10024;</span>
+          <p class="banner-title">AURA beauty</p>
+          <p class="banner-copy">あなたの美しさを、もうひとつ先へ。</p>
+          <span class="banner-cta">RESERVE NOW</span>
+        </div>
+        <div class="works-meta">
+          <p class="works-type">美容サロン / バナー</p>
+          <p class="works-desc">高級感のあるモダンなトーンで訴求する予約促進バナー</p>
         </div>
       </div>
-      <div class="work-card">
-        <div class="thumb">サンプル バナー</div>
-        <div class="info">
-          <h3>サンプルバナー各種</h3>
-          <p>キャンペーン告知・セール案内・SNS広告用バナーのサンプル。ターゲットに合わせたトーン設計。</p>
-          <div class="tags"><span>Canva</span><span>バナー</span><span>広告</span></div>
+
+      <!-- Banner 3: Bakery / Pop -->
+      <div class="works-card">
+        <div class="works-banner banner-bakery">
+          <span class="banner-icon">&#127838;</span>
+          <p class="banner-title">まちのパン工房 Flour</p>
+          <p class="banner-copy">毎朝焼きたて、笑顔がふくらむ。</p>
+          <span class="banner-cta">TODAY'S BREAD</span>
+        </div>
+        <div class="works-meta">
+          <p class="works-type">パン屋 / バナー</p>
+          <p class="works-desc">親しみやすいポップなデザインで来店を促すバナー</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill">Canva</div>
-      <div class="skill">Wix / Wix Studio</div>
-      <div class="skill">STUDIO</div>
-      <div class="skill">WordPress</div>
-      <div class="skill">HTML / CSS</div>
-      <div class="skill">PowerPoint</div>
-      <div class="skill">Photoshop（基本操作）</div>
+<!-- Skills -->
+<section id="skills">
+  <div class="wrap">
+    <span class="sec-label">Skills</span>
+    <h2 class="sec-title">使っているツール</h2>
+    <div class="skills-wrap">
+      <span class="skill-chip">Canva</span>
+      <span class="skill-chip">Wix / Wix Studio</span>
+      <span class="skill-chip">STUDIO</span>
+      <span class="skill-chip">WordPress</span>
+      <span class="skill-chip">HTML / CSS</span>
+      <span class="skill-chip">PowerPoint</span>
+      <span class="skill-chip">Photoshop（基本操作）</span>
     </div>
   </div>
 </section>
 
-<section style="background:#fff">
-  <div class="container">
-    <h2>Price</h2>
+<!-- Price -->
+<section id="price">
+  <div class="wrap">
+    <span class="sec-label">Price</span>
+    <h2 class="sec-title">料金の目安</h2>
     <table class="price-table">
-      <tr><th>メニュー</th><th>料金（税込）</th><th>納期目安</th></tr>
-      <tr><td>バナー / SNS画像</td><td class="price">3,000円〜</td><td>2〜3日</td></tr>
-      <tr><td>LP制作</td><td class="price">30,000円〜</td><td>1〜2週間</td></tr>
-      <tr><td>ホームページ制作</td><td class="price">50,000円〜</td><td>2〜4週間</td></tr>
-      <tr><td>既存サイト修正・更新</td><td class="price">3,000円〜</td><td>1〜3日</td></tr>
+      <thead>
+        <tr>
+          <th>メニュー</th>
+          <th>料金（税込）</th>
+          <th>納期目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>バナー / SNS画像</td>
+          <td class="amount">3,000円〜</td>
+          <td>2〜3日</td>
+        </tr>
+        <tr>
+          <td>LP制作</td>
+          <td class="amount">30,000円〜</td>
+          <td>1〜2週間</td>
+        </tr>
+        <tr>
+          <td>ホームページ制作</td>
+          <td class="amount">50,000円〜</td>
+          <td>2〜4週間</td>
+        </tr>
+        <tr>
+          <td>既存サイト修正・更新</td>
+          <td class="amount">3,000円〜</td>
+          <td>1〜3日</td>
+        </tr>
+      </tbody>
     </table>
-    <p style="margin-top:16px;font-size:13px;color:#888">※ 内容・ページ数により変動します。お気軽にご相談ください。</p>
+    <p class="price-note">※ 内容やページ数によって変わります。お気軽にご相談ください。</p>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="contact-box">
-      <h3>お気軽にご相談ください</h3>
-      <p>「まだイメージが固まっていない」段階でも大丈夫です。<br>ちょっとした相談だけでもお気軽にどうぞ。</p>
-      <p style="font-size:14px;color:#555;margin-bottom:16px">ご利用中のサービスからメッセージをお送りください。</p>
+<!-- Contact -->
+<section id="contact">
+  <div class="wrap">
+    <span class="sec-label">Contact</span>
+    <h2 class="sec-title">お仕事のご相談</h2>
+    <div class="contact-card">
+      <p>「まだイメージが固まっていない」段階でも大丈夫です。<br>ちょっとした相談からお気軽にどうぞ。</p>
+      <div class="contact-btns">
+        <!-- TODO: Lancers IDは要確認。正式IDが判明したら差し替えてください -->
+        <a href="https://www.lancers.jp/profile/miyachi-haruki" target="_blank" rel="noopener" class="btn-lancers">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Lancers でメッセージを送る
+        </a>
+        <a href="mailto:miyachi.works@gmail.com" class="btn-mail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          メールで問い合わせる
+        </a>
+      </div>
+      <p class="contact-sub">Lancers 経由が最もスムーズです / miyachi.works@gmail.com</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    &copy; 2026 宮地陽生 All rights reserved.
-  </div>
+  <div class="wrap">&copy; 2026 Miyachi Haruki</div>
 </footer>
 
 </body>
